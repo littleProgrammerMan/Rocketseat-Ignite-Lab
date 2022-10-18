@@ -6,7 +6,8 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    '@storybook/addon-a11y'
   ],
   "framework": "@storybook/react",
   "core": {
@@ -16,9 +17,10 @@ module.exports = {
     "storyStoreV7": true
   },
   viteFinal: (config, { configType }) => {
-    if (configType == 'PRODUCTION') {
+    if (configType === 'PRODUCTION') {
       config.base = '/Rocketseat-Ignite-Lab/'
     }
+
     return config
   }
 }
